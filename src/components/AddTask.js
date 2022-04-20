@@ -3,7 +3,7 @@ import moment from "moment";
 
 import { FaRegListAlt, FaRegCalendarAlt } from "react-icons/fa";
 
-import { firebase } from "../firebase";
+// import { firebase } from "../firebase";
 import { useSelectedProjectValue } from "../context";
 import { ProjectOverlay } from "./ProjectOverlay";
 import { TaskDate } from "./TaskDate";
@@ -32,26 +32,27 @@ export const AddTask = ({
     } else if (projectid === "NEXT_7") {
       collatedDate = moment().add(7, "days").format("DD/MM/YYYY");
     }
-    return (
-      task &&
-      projectid &&
-      firebase
-        .firestore()
-        .collection("tasks")
-        .add({
-          archived: false,
-          projectid,
-          task,
-          date: collatedDate || taskDate,
-          userid: "xD54Q3dGwp58SSim6ndf",
-        })
-        .then(() => {
-          setTask("");
-          setProject("");
-          setShowMain("");
-          setShowProjectOverlay(false);
-        })
-    );
+    // return (
+    //   task &&
+    //   projectid &&
+    //   firebase
+    //     .firestore()
+    //     .collection("tasks")
+    //     .add({
+    //       archived: false,
+    //       projectid,
+    //       task,
+    //       date: collatedDate || taskDate,
+    //       userid: "xD54Q3dGwp58SSim6ndf",
+    //     })
+    //     .then(() => {
+    //       setTask("");
+    //       setProject("");
+    //       setShowMain("");
+    //       setShowProjectOverlay(false);
+    //     })
+    // );
+    console.log(`DEBUG add`);
   };
 
   return (

@@ -7,6 +7,7 @@ export const Projects = ({ activeValue = null }) => {
   const { setSelectedProject } = useSelectedProjectValue();
   const { projects } = useProjectsValue();
 
+  if (!projects?.length) return <div>EMPTY</div>
   return (
     projects &&
     projects.map((project) => (

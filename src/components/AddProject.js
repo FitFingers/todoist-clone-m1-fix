@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { firebase } from "../firebase";
+// import { firebase } from "../firebase";
 import { generatePushId } from "../helpers";
 import { useProjectsValue } from "../context";
 
@@ -10,21 +10,22 @@ export const AddProject = ({ shouldShow = false }) => {
   const projectid = generatePushId();
   const { projects, setProjects } = useProjectsValue();
 
-  const addProject = () =>
-    projectName &&
-    firebase
-      .firestore()
-      .collection("projects")
-      .add({
-        projectid,
-        name: projectName,
-        userid: "xD54Q3dGwp58SSim6ndf",
-      })
-      .then(() => {
-        setProjects([...projects]);
-        setProjectName("");
-        setShow(false);
-      });
+  const addProject = () => console.log(`DEBUG add`)
+  
+    // projectName &&
+    // firebase
+    //   .firestore()
+    //   .collection("projects")
+    //   .add({
+    //     projectid,
+    //     name: projectName,
+    //     userid: "xD54Q3dGwp58SSim6ndf",
+    //   })
+    //   .then(() => {
+    //     setProjects([...projects]);
+    //     setProjectName("");
+    //     setShow(false);
+    //   });
 
   return (
     <div className="add-project" data-testid="add-project">
