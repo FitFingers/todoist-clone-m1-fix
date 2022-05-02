@@ -1,3 +1,7 @@
+A fix for the issue referenced in [this Stack Overflow Post](https://stackoverflow.com/questions/70734613/unable-to-resolve-npm-install-pre-gyp-error/71940382#71940382)
+
+<hr>
+
 <h1>Todo App</h1>
 <p>
 In this repo, I am had created the popular <a href="https://todoist.com">Todoist</a> application using <b>create-react-app</b> as a base from scratch using React (Custom Hooks, Context), Firebase & React Testing Library (unit & integration testing). In addition to the latter technologies, I had styled the application using SCSS (CSS) and following the BEM naming methodology and I had to make sure that the application is fully responsive.
